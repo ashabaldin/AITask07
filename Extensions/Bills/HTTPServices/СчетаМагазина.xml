@@ -95,6 +95,25 @@
 					</Method>
 				</ChildObjects>
 			</URLTemplate>
+			<URLTemplate uuid="4305e4b0-b10e-492d-9a06-04da0e78884c">
+				<Properties>
+					<Name>Переоценка</Name>
+					<Synonym/>
+					<Comment/>
+					<Template>/prices/reprice</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="0048c97f-3629-4a30-999e-774def0cbdf3">
+						<Properties>
+							<Name>Создать</Name>
+							<Synonym/>
+							<Comment/>
+							<HTTPMethod>POST</HTTPMethod>
+							<Handler>Переоценить</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
 		</ChildObjects>
 	</HTTPService>
 </MetaDataObject>

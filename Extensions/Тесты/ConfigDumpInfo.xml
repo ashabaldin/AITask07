@@ -1,8 +1,12 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ConfigDumpInfo xmlns="http://v8.1c.ru/8.3/xcf/dumpinfo" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" format="Hierarchical" version="2.21">
 	<ConfigVersions>
+		<Metadata name="CommonModule.ТестыИнтеграция" id="161fc97f-3a2d-468d-b399-e6f60da4bf57" configVersion="5f3ac0c206f7d3e61e1776e15f587f477ac7a4f2"/>
+		<Metadata name="CommonModule.ТестыИнтеграция.Module" id="161fc97f-3a2d-468d-b399-e6f60da4bf57.0" configVersion="0f8d5a88e41e4b09a74148d3f79aea3668080602"/>
 		<Metadata name="CommonModule.ТестыПроверкаПодключения" id="906e56be-5074-4536-a6f9-3b5714e1cddd" configVersion="4c7e700a34ee8b9039dd756918c6911c229b1bdc"/>
-		<Metadata name="CommonModule.ТестыПроверкаПодключения.Module" id="906e56be-5074-4536-a6f9-3b5714e1cddd.0" configVersion="6a20e6597144e22ee2d8d28177ea72b0a9ab1dcf"/>
-		<Metadata name="Configuration.Тесты" id="4deebdbe-f7a0-4c5c-9afb-056ed7d0c813" configVersion="db537748ceea4ac95f0583faad02d04522eb25a0"/>
+		<Metadata name="CommonModule.ТестыПроверкаПодключения.Module" id="906e56be-5074-4536-a6f9-3b5714e1cddd.0" configVersion="b499a8299c75a2cba0e070bfa815b9b3a353ac29"/>
+		<Metadata name="CommonModule.ТестыЮнит" id="99a37595-d4f1-4630-98d8-f09a04fe8501" configVersion="83e40b21a2fffdcb585a6b5f3ab46d4668a02997"/>
+		<Metadata name="CommonModule.ТестыЮнит.Module" id="99a37595-d4f1-4630-98d8-f09a04fe8501.0" configVersion="6f41a37bac7646ea65df32ce2c2b27e2caecf1e0"/>
+		<Metadata name="Configuration.Тесты" id="4deebdbe-f7a0-4c5c-9afb-056ed7d0c813" configVersion="27674053c9fbabaea64e3a2b0ac5830540e07fdc"/>
 	</ConfigVersions>
 </ConfigDumpInfo>

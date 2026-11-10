@@ -13,3 +13,9 @@ ws/**/tmp/
 *.cfe
 !vendor/yaxunit/YAxUnit-25.12.cfe
 *.dt
+
+# Рабочие файлы Superpowers
+.superpowers/
+
+# Логи MCP-сервера bsl-platform-context (пишет в текущий каталог)
+mcp-server.log*
