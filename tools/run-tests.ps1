@@ -4,7 +4,8 @@
 # Источник параметров запуска YAxUnit: https://github.com/bia-technologies/yaxunit (docs, run-config)
 param(
     [string]$Config = 'tests\yaxunit\все.json',
-    [string]$Extension = 'Тесты',
+    # Расширения для загрузки: имя расширения в ИБ -> каталог в Extensions\
+    [hashtable]$Extensions = [ordered]@{ 'СчетаМагазина' = 'Bills'; 'Тесты' = 'Тесты' },
     [switch]$SkipLoad
 )
 $ErrorActionPreference = 'Stop'
@@ -21,10 +22,18 @@ function Invoke-1C([string]$Exe, [string[]]$Arguments) {
 }
 
 if (-not $SkipLoad) {
-    $code = Invoke-1C '1cv8.exe' @('DESIGNER', $base, $user, '/DisableStartupDialogs',
-        '/LoadConfigFromFiles', "`"$root\Extensions\$Extension`"", '-Extension', $Extension,
-        "/Out`"$logs\load-$Extension.log`"")
-    if ($code -ne 0) { Get-Content "$logs\load-$Extension.log" -Encoding UTF8; exit 2 }
+    foreach ($Extension in $Extensions.Keys) {
+        $dir = $Extensions[$Extension]
+        $code = Invoke-1C '1cv8.exe' @('DESIGNER', $base, $user, '/DisableStartupDialogs',
+            '/LoadConfigFromFiles', "`"$root\Extensions\$dir`"", '-Extension', $Extension,
+            "/Out`"$logs\load-$Extension.log`"")
+        if ($code -ne 0) { Get-Content "$logs\load-$Extension.log" -Encoding UTF8; exit 2 }
+        # Загруженное расширение применяется к ИБ только после обновления (отдельным вызовом:
+        # вместе с /LoadConfigFromFiles платформа отвечает «Ошибка в параметрах командной строки»).
+        $code = Invoke-1C '1cv8.exe' @('DESIGNER', $base, $user, '/DisableStartupDialogs',
+            '/UpdateDBCfg', '-Extension', $Extension, "/Out`"$logs\update-$Extension.log`"")
+        if ($code -ne 0) { Get-Content "$logs\update-$Extension.log" -Encoding UTF8; exit 2 }
+    }
 
     # Конфигуратор подключает загруженное расширение в безопасном режиме — YAxUnit в нем не работает.
     $epf = Join-Path $logs 'СнятиеБезопасногоРежимаРасширений.epf'
