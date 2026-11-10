@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<point xmlns="http://v8.1c.ru/8.2/virtual-resource-system" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	base="/AITask07"
+	ib="File=&quot;C:\Users\psi\Downloads\AICourse\DBIS07&quot;;"
+	enableStandardOData="true">
+		<ws publishExtensionsByDefault="true" />
+		<httpServices publishExtensionsByDefault="true" />
+		<pool size="100" maxAge="20000" attempts="5" attemptTimeout="500" waitTimeout="500" />
+</point>

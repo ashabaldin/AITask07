@@ -1,0 +1,1 @@
+"C:\Program Files\1C\1CE\components\1c-edt-2026.1.3+25-x86_64\plugins\com.company1c.link.agent.publicator.win32_4.0.2\binaries\httpd_2.4.41-x86_64\bin\httpd.exe" -f C:\Users\psi\aiwsis07\ws\AITask07\httpd-54316.conf 
