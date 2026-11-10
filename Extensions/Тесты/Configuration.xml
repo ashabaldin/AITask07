@@ -62,6 +62,8 @@
 		</Properties>
 		<ChildObjects>
 			<CommonModule>ТестыПроверкаПодключения</CommonModule>
+			<CommonModule>ТестыЮнит</CommonModule>
+			<CommonModule>ТестыИнтеграция</CommonModule>
 		</ChildObjects>
 	</Configuration>
 </MetaDataObject>

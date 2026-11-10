@@ -63,6 +63,7 @@
 		<ChildObjects>
 			<CommonModule>СчетаМагазинаМетаданные</CommonModule>
 			<CommonModule>СчетаМагазинаДанные</CommonModule>
+			<CommonModule>СчетаМагазинаПереоценка</CommonModule>
 			<HTTPService>СчетаМагазина</HTTPService>
 		</ChildObjects>
 	</Configuration>
