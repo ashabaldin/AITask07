@@ -1,4 +1,4 @@
-// Переоценка товаров через сервис объектов: POST /prices/reprice.
+﻿// Переоценка товаров через сервис объектов: POST /prices/reprice.
 // Дизайн: docs/superpowers/specs/2026-11-10-repricing-design.md
 
 #Область ПрограммныйИнтерфейс

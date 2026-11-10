@@ -1,0 +1,29 @@
+### Переоценка товаров через сервис объектов (REST Client / HTTP Client)
+### Дизайн: docs/superpowers/specs/2026-11-10-repricing-design.md
+### Публикация: ws/AITask07 (start.cmd), база DBIS07.
+### В items — идентификаторы товаров Справочник._ДемоНоменклатура (UUID, как их отдает сервис).
+
+@base = http://localhost:54316/AITask07/hs/objects
+
+### Переоценка: +7 % с 1 декабря 2026 года
+# Ожидается 200: {"repriced": [{"id", "oldPrice", "newPrice"}], "skipped": [{"id", "reason": "no_price"}]}
+POST {{base}}/prices/reprice
+Content-Type: application/json
+
+{
+  "items": ["<id товара>", "<id товара>"],
+  "percent": 7,
+  "date": "2026-12-01"
+}
+
+### Отказ по проценту: 150 вне допустимого диапазона
+# Ожидается 400: {"error": {"code": "invalid_data", "message": "Неверные данные переоценки",
+#   "details": [{"path": "percent", "message": "Процент 150 недопустим: допустимо от -50 до 100, кроме 0"}]}}
+POST {{base}}/prices/reprice
+Content-Type: application/json
+
+{
+  "items": ["<id товара>"],
+  "percent": 150,
+  "date": "2026-12-01"
+}
