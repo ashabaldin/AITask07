@@ -1,0 +1,14 @@
+{
+  "filter": {
+    "extensions": ["Тесты"]
+  },
+  "reportFormat": "jUnit",
+  "reportPath": "C:\\Users\\psi\\aiwsis07\\.logs\\yaxunit\\все.xml",
+  "exitCode": "C:\\Users\\psi\\aiwsis07\\.logs\\yaxunit\\все-exit.txt",
+  "closeAfterTests": true,
+  "logging": {
+    "enable": true,
+    "file": "C:\\Users\\psi\\aiwsis07\\.logs\\yaxunit\\все.log",
+    "level": "info"
+  }
+}
