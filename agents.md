@@ -108,7 +108,7 @@ File="C:\Users\psi\Downloads\AICourse\DBIS07";
 
 ### 9. Доработки в расширениях тестируем через YaxUnit
 - Тесты живут в отдельном расширении `Тесты` (`Extensions\Тесты`, префикс `Тесты`), а не в рабочих расширениях.
-- Подключение, написание и запуск тестов — через навык `testing-with-yaxunit`, отчет — в формате jUnit.
+- Подключение, написание и запуск тестов — через навык `testing-with-yaxunit` (адаптированная копия в репозитории: `.claude/skills/testing-with-yaxunit/SKILL.md`, раздел «Под своё окружение»), отчет — в формате jUnit.
 - Сначала тест (red), потом код (green), см. `test-driven-development`.
 - YaxUnit: https://github.com/bia-technologies/yaxunit
 
